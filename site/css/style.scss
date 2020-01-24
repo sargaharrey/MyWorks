@@ -1,0 +1,400 @@
+/*-----------------------------------------------------------------------------------
+
+ Theme Name: Utravel
+ Description: Travel Onepage Template
+ Author: oversoft
+ Author URI: https://themeforest.net/user/oversoft00
+ Version: 1.0
+
+ Main Color   : #FF55858
+ main Font    : Lora, Merriweather
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+ == Table Of Content
+
+	01 Basics
+	02 Buttons
+	03 Navbar
+	04 Header
+	05 Hero
+	06 Services
+	07 Portfolio-Destinations
+	08 About
+	09 Team
+	10 Video
+	11 Testimonials
+	12 Blog
+	13 Map
+	14 Contact
+	15 Footer
+	16 Responsive
+ 
+
+/*---------------------------------------------------------------- 
+---------------------------------------------------------------- */
+
+$main-color: #222831;
+$secound-color:#00ADB5;
+$Thirst-color:#393E46;
+$mobile-xs-screen: 480px;
+$tablet-sm-screen: 767px;
+$desk-md-screen: 991px;
+$desk-xlg-screen: 1200px;
+
+/* ----------------------------------------------------------------
+     [ 01 Start Basics ]
+-----------------------------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	word-wrap: break-word;
+
+}
+
+body {
+	color: white;
+	line-height: 1.3;
+	font-weight: 500;
+	font-size: 14px;
+	font-family: 'Merriweather';
+	overflow-x: hidden !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Lora';
+}
+
+p {
+	font-size: 15px;
+	font-weight: 300;
+	color: white;
+	line-height: 1.8;
+	margin: 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+ul{
+	margin: 0;
+}
+
+span, a, a:hover {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+.section-padding{
+	padding: 120px 0;
+}
+
+.section-head{
+	margin-bottom: 80px;
+	padding-bottom: 30px;
+	position: relative;
+
+	&:after{
+		content: '';
+		width: 200px;
+		height: 3px;
+		background-color: rgba(20, 20, 20, 0.2);
+		position: absolute;
+		bottom: 0;
+		left: calc(50% - 100px);
+	}
+
+	&:before{
+		content: '';
+		width: 50px;
+		height: 5px;
+		background-color: $main-color;
+		position: absolute;
+		bottom: -2px;
+		left: calc(50% - 25px);
+		border-radius: 2px;
+	}
+
+	&.text-left{
+
+		&:after,&:before{
+			left: 15px;
+		}
+	}
+	
+	
+
+	h4{
+		font-size: 45px;
+		font-weight: 900;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+
+	p{
+		margin-top: 15px;
+		font-size: 14px;
+		font-weight: 300;
+	}
+}
+
+.round{
+	border-radius: 50%/50px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow: hidden;
+}
+
+.bg-gray{
+	background: #f6f7f7;
+}
+
+.o-hidden {
+	overflow: hidden;
+}
+
+.ontop{
+	position: relative;
+	z-index: 4;
+}
+
+.position-re {
+	position: relative;
+}
+
+.full-width{
+	width: 100% !important;
+}
+
+.lg-line-height{
+	line-height: 1.5;
+}
+
+.bg-img{
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+
+.bg-fixed{
+	background-attachment: fixed;
+}
+
+.valign{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.v-middle {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots{
+	margin-top: 15px;
+	display: inline-block;
+}
+
+.owl-theme .owl-dots .owl-dot span{
+	width: 5px;
+	height: 10px;
+	margin: 0 4px;
+	border-radius: 0;
+	background: rgba(200,200,200,.4);
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span{
+	background: $main-color;
+	height: 20px;
+}
+
+/* ----------------------------------------------------------------
+     [ End Basics ]
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+     [ 02 Start Buttons ]
+-----------------------------------------------------------------*/
+
+
+.butn{
+   padding: 15px 30px;
+   background-color: transparent;
+   border-radius: 3px;
+   border:3px solid #FF5858;
+   position: relative;
+   z-index: 3;
+   transition: all .4s;
+   cursor: pointer;
+   outline: none !important;
+   overflow: hidden;
+
+   span{
+	   position: relative;
+	   z-index: 2;
+	   transition-delay: 0s;
+	   color: white;
+	   
+   }
+
+   &:after{
+	   content: "";
+	   height: 100%;
+	   width: 0%;
+	   background-color: $main-color;
+	   position: absolute;
+	   left: 0%;
+	   bottom: 0%;
+	   transition: width .4s;
+	   z-index: 1;
+	   opacity: .4;
+
+   }
+   &:after{
+	transition-delay: 0s;
+	background: $main-color;
+
+	opacity: 1;
+   }
+
+&:hover{
+	span{
+		color:white ;
+	}
+	&:after{
+		width: 100%;
+		color: #FFFFFF;
+	
+	}
+	
+	
+}
+}
+
+
+.butn-bg{
+	background: $main-color;
+	border-color: $main-color;
+	color: white;
+  &:hover {
+	  span{
+		  color:white;
+		  
+	  }
+  }
+}
+
+/* ----------------------------------------------------------------
+     [ End Buttons ]
+-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------
+     [Top-bar]
+  -----------------------------------------------------------------*/
+ .Top-bar{
+	 background-color: $main-color;
+	 display: flex;
+	 justify-content: space-between;
+	 .social-icons{
+		 margin: 0;
+		 
+		 li{
+			 float: left;
+       a{
+		   padding: 15px 20px;
+		   font-size: 20px;
+		  
+	   }
+	}
+	}
+	 form{
+		 margin: 12px;
+		.input-groub-prepand{
+			padding: 8px 20px;
+			background:$secound-color ;
+			color: white;
+		}
+		input{
+			padding: 6px;
+			margin: 0;
+		}
+  	 }
+ }
+
+
+ /*--------------------------------------------
+	 [navbar]
+	 ----------------------------------------*/
+
+
+	 .navbar-custom{
+		  background: $Thirst-color !important;
+		  color: white;
+		  font-size: 18px;
+		  font-weight: 500;
+		  .logo{
+			  h1{
+			  font-size: 32px;
+			  font-weight: 700;
+			  color: white;
+			  span{
+				  color:$secound-color;
+			  }
+		  }
+		}
+		  .nav-item{
+			  padding: 15px 22px;
+		  }
+	 }
+
+	 /* ----------------------------------------
+	   [header]
+	   -------------------------------------------*/
+	   .header{
+				height: 90vh;overflow: hidden;
+				
+	   &::after{
+		content:'';
+		position:absolute;
+		
+		left: 50%;
+        width: 100px;
+        height: 100px;
+        -webkit-transform: translateX(-50%) rotate(45deg);
+        transform: translateX(-50%) rotate(45deg);}
+ 
+	
+	   
+	   &::before{
+		content:'';
+		position:absolute;
+		left: 50%;
+        width: 100px;
+        height: 100px;
+        -webkit-transform: translateX(-50%) rotate(45deg);
+        transform: translateX(-50%) rotate(45deg);}
+ 
+	
+
+	   }
+	
+	
